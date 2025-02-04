@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DAM_Leccion_01.MainPage"
+             xmlns:Leccion2="clr-namespace:PRACTICAS2.Model" >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Leccion2:PersonaModel x:Key="persona" Nombre="Lesly" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <Label
+                Text="Hola Mundo, soy Yoooo!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Bienvenido, soy LESLY GOMEZ"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Dale Click" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <Entry
+                x:Name="txtNombre"
+                Text="{Binding Nombre}"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Escibe tu nombre" />
+
+            <Button
+                x:Name="Aceptar"
+                Clicked="Aceptar_Clicked"
+                HorizontalOptions="CenterAndExpand"
+                Text="Aceptar" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
