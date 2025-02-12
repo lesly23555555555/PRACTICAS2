@@ -65,7 +65,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="view\" />
+	  <Compile Update="view\Modos.xaml.cs">
+	    <DependentUpon>Modos.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="view\Modos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

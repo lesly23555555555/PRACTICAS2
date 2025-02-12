@@ -1,25 +1,50 @@
-﻿namespace PRACTICAS2
+﻿using PRACTICAS2.Model;
+
+namespace PRACTICAS2
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
 
+        private PersonaModel personaModel { get; set; }
+
         public MainPage()
         {
             InitializeComponent();
+            Ejecutar();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        public void Ejecutar()
         {
-            count++;
+            //PersonaModel personaModel = new PersonaModel();
+            //personaModel.Nombre = "Holaa";
+            //txtNombre.Text = personaModel.Nombre;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            personaModel = new PersonaModel()
+            {
+                Nombre = "LESLY GOMEZ",
+            };
+
+            BindingContext = personaModel;
+
+            //txtNombre.Text = personaModel.Nombre;
+            //Binding personaBinding = new Binding();
+
+            //personaBinding.Source = personaModel; //Origen
+            //personaBinding.Path = "Nombre"; //Ruta
+            //txtNombre.SetBinding(Entry.TextProperty, personaBinding); //Destino
+
         }
-    }
+        //EVENTO GUARDAR 
+        private void Aceptar_Clicked(object sender, EventArgs e)
+        {
+            personaModel.Nombre = "Lesly";
+            personaModel.Apellido = "Gomez";
+            personaModel.Edad = "21";
+        }
 
+    }
 }
+
+

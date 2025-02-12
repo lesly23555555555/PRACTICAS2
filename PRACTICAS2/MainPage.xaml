@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DAM_Leccion_01.MainPage"
+             x:Class="PRACTICAS2.MainPage"
              xmlns:Leccion2="clr-namespace:PRACTICAS2.Model" >
 
     <ContentPage.Resources>
@@ -35,7 +35,6 @@
                 x:Name="CounterBtn"
                 Text="Dale Click" 
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
 
             <Entry
@@ -43,6 +42,16 @@
                 Text="{Binding Nombre}"
                 HorizontalOptions="FillAndExpand"
                 Placeholder="Escibe tu nombre" />
+            <Entry
+             x:Name="txtApellido"
+             Text="{Binding Apellido }"
+             HorizontalOptions="FillAndExpand"
+             Placeholder="Escibe tu Apellido" />
+            <Entry
+                x:Name="txtEdad"
+                Text="{Binding Edad}"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Escibe tu edad" />
 
             <Button
                 x:Name="Aceptar"
