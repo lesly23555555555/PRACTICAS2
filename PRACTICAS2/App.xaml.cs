@@ -8,9 +8,9 @@ namespace PRACTICAS2
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
-        }
+            //MainPage = new AppShell();
 
-        
+            MainPage = new PersonasView();
+        }
+        }
     }
-}
