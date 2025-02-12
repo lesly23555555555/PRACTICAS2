@@ -1,4 +1,5 @@
 ﻿using PRACTICAS2.Model;
+using PRACTICAS2.ViewModel;
 
 namespace PRACTICAS2
 {
@@ -6,42 +7,19 @@ namespace PRACTICAS2
     {
         int count = 0;
 
-        private PersonaModel personaModel { get; set; }
+        MainPageViewModel mainPageViewModel = new MainPageViewModel();
 
         public MainPage()
         {
             InitializeComponent();
-            Ejecutar();
-        }
-
-        public void Ejecutar()
-        {
-            //PersonaModel personaModel = new PersonaModel();
-            //personaModel.Nombre = "Holaa";
-            //txtNombre.Text = personaModel.Nombre;
-
-
-            personaModel = new PersonaModel()
-            {
-                Nombre = "LESLY GOMEZ",
-            };
-
-            BindingContext = personaModel;
-
-            //txtNombre.Text = personaModel.Nombre;
-            //Binding personaBinding = new Binding();
-
-            //personaBinding.Source = personaModel; //Origen
-            //personaBinding.Path = "Nombre"; //Ruta
-            //txtNombre.SetBinding(Entry.TextProperty, personaBinding); //Destino
-
+            BindingContext = mainPageViewModel;
         }
         //EVENTO GUARDAR 
         private void Aceptar_Clicked(object sender, EventArgs e)
         {
-            personaModel.Nombre = "Lesly";
-            personaModel.Apellido = "Gomez";
-            personaModel.Edad = "21";
+           // personasModel.Nombre = "Lesly";
+           // personasModel.Apellido = "Gomez";
+            //personasModel.Edad = "21";
         }
 
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PRACTICAS2.Model
 {
-    class PersonaModel : INotifyPropertyChanged
+    public class PersonasModel : INotifyPropertyChanged
     {
         private string? nombre;
         private string? apellido;
